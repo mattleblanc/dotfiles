@@ -35,7 +35,7 @@ alias sq='ssh -Y mlb@squirrel.dhcp.lbl.gov'
 alias sqpf='ssh -N -f -L localhost:8920:localhost:8920 mlb@squirrel.dhcp.lbl.gov'
 
 #. $(brew --prefix root6)/libexec/thisroot.sh
-. /Users/mleblanc/root/build/bin/thisroot.sh
+# . /Users/mleblanc/root/build/bin/thisroot.sh
 
 alias usage='du -hs * | sort -hr'
 
@@ -43,7 +43,10 @@ export PATH=/usr/local/sbin:/Library/TeX/Distributions/.DefaultTeX/Contents/Prog
 export PATH=/Users/mleblanc/fastjet-install/bin:$PATH
 export PATH=/Users/mleblanc/Library/Python/2.7/bin:$PATH
 export PATH=/Users/mleblanc/Repositories/pandamonium:$PATH
-export PYTHONPATH=/Users/mleblanc/fastjet-3.3.2/../fastjet-install/lib/python2.7/site-packages/:$PYTHONPATH
+export PATH=/opt/homebrew/bin:$PATH
+export PYTHON=/opt/homebrew/bin/python3
+export PYTHONPATH=/Users/mleblanc/fastjet-install/lib/python3.9/site-packages/:$PYTHONPATH
+#export PYTHONPATH=/Users/mleblanc/fastjet-install/lib/python2.7/site-packages/:$PYTHONPATH
 export CPATH=/Users/mleblanc/fastjet-install/include:/Users/mleblanc/pythia/include/Pythia8/:$CPATH
 
 # Stop git from opening diffs and logs in less
@@ -53,11 +56,11 @@ export GIT_PAGER=cat git log
 alias pico8='/Applications/PICO-8.app/Contents/MacOS/pico8'
 
 # cuda stuff
-export CUDA_ROOT=/usr/local/cuda
-export LD_LIBRARY_PATH=$CUDA_ROOT/lib:$LD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
-export LIBRARY_PATH=$CUDA_ROOT/lib:$LIBRARY_PATH
-export PATH=/usr/local/cuda/bin:$PATH
+#export CUDA_ROOT=/usr/local/cuda
+#export LD_LIBRARY_PATH=$CUDA_ROOT/lib:$LD_LIBRARY_PATH
+#export DYLD_LIBRARY_PATH=$CUDA_ROOT/lib:$DYLD_LIBRARY_PATH
+#export LIBRARY_PATH=$CUDA_ROOT/lib:$LIBRARY_PATH
+#export PATH=/usr/local/cuda/bin:$PATH
 
 # mute macOS message about zsh being the default, bash 4 life
 export BASH_SILENCE_DEPRECATION_WARNING=1
