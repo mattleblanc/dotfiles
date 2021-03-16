@@ -26,7 +26,8 @@ alias root='root -l'
 
 #alias python='/usr/local/Cellar/python/2.7.14/bin/python2.7'
 #source /Users/mleblanc/perl5/perlbrew/etc/bashrc
-alias python='/usr/bin/python'
+#alias python='/usr/bin/python'
+alias python='python3'
 
 # ssh stuff
 alias usc='ssh -Y usc'
