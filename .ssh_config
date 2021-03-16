@@ -1,0 +1,27 @@
+Host usc usatlas
+     HostName login.usatlas.org
+     User mleblanc
+     IdentityFile ~/.ssh/id_rsa_atlas
+     ForwardX11 yes
+
+Host lx lxplus cern
+     HostName lxplus.cern.ch
+     User mleblanc
+     IdentityFile ~/.ssh/id_rsa_atlas
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     ForwardX11 yes
+     
+Host sq squirrel gpu
+     HostName squirrel.dhcp.lbl.gov
+     User mlb
+     IdentityFile ~/.ssh/id_rsa_atlas
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     ForwardX11 yes
+
+Host *
+     ServerAliveInterval 120
+     ServerAliveCountMax 30
+     Protocol 2
+     IdentityFile ~/.ssh/id_rsa_atlas
