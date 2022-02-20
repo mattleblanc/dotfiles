@@ -33,10 +33,16 @@ alias python='python3'
 alias usc='ssh -Y usc'
 alias lx='ssh -Y lxplus'
 alias sq='ssh -Y mlb@squirrel.dhcp.lbl.gov'
-alias sqpf='ssh -N -f -L localhost:8920:localhost:8920 mlb@squirrel.dhcp.lbl.gov'
+alias sqpf='ssh -N -f -L localhost:8889:localhost:8889 mlb@squirrel.dhcp.lbl.gov'
+alias big='ssh -Y big'
+alias bigger='ssh -Y bigger'
+alias uc='ssh -Y mlb@login.af.uchicago.edu'
 
+# ugh ROOT why are you like this
 #. $(brew --prefix root6)/libexec/thisroot.sh
 # . /Users/mleblanc/root/build/bin/thisroot.sh
+. /Users/mleblanc/root-install/bin/thisroot.sh
+#. /opt/homebrew/bin/thisroot.sh
 
 alias usage='du -hs * | sort -hr'
 
