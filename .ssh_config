@@ -11,7 +11,15 @@ Host lx lxplus cern
      GSSAPIAuthentication yes
      GSSAPIDelegateCredentials yes
      ForwardX11 yes
-     
+
+Host big lxbig
+     HostName lxplus8s02.cern.ch
+     User mleblanc
+     IdentityFile ~/.ssh/id_rsa_atlas
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     ForwardX11 yes
+
 Host sq squirrel gpu
      HostName squirrel.dhcp.lbl.gov
      User mlb
@@ -19,6 +27,31 @@ Host sq squirrel gpu
      GSSAPIAuthentication yes
      GSSAPIDelegateCredentials yes
      ForwardX11 yes
+     
+     Host pcatlidps06
+User          sbmuser
+HostName      pcatlidps06.cern.ch
+ProxyCommand  ssh mleblanc@lxplus.cern.ch nc %h %p 2> /dev/null
+
+Host pcatlidps10
+User          sbmuser
+HostName      pcatlidps10.cern.ch
+ProxyCommand  ssh mleblanc@lxplus.cern.ch nc %h %p 2> /dev/null
+
+Host pcatlidps11
+User          sbmuser
+HostName      pcatlidps11.cern.ch
+ProxyCommand  ssh mleblanc@lxplus.cern.ch nc %h %p 2> /dev/null
+
+Host pcatlidps12
+User          sbmuser
+HostName      pcatlidps12.cern.ch
+ProxyCommand  ssh mleblanc@lxplus.cern.ch nc %h %p 2> /dev/null
+
+Host pcatlidps13
+User          sbmuser
+HostName      pcatlidps13.cern.ch
+ProxyCommand  ssh mleblanc@lxplus.cern.ch nc %h %p 2> /dev/null
 
 Host *
      ServerAliveInterval 120
